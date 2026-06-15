@@ -1,6 +1,6 @@
 # Date Enhance for Illustrator
 
-<video src="screecapture.mov" autoplay loop muted playsinline width="100%"></video>
+<video src="screecapture.mp4" autoplay loop muted playsinline width="100%"></video>
 
 Date Enhance 是一個給活動海報、展演視覺、課程與場次資訊設計流程使用的 Adobe Illustrator CEP panel 外掛。
 
