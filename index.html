@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Date Enhance</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main class="panel">
+      <header class="topbar">
+        <div>
+          <h1>Date Enhance</h1>
+          <p id="docStatus">正在連接 Illustrator...</p>
+        </div>
+        <button id="refreshBtn" class="icon-button" title="重新整理">↻</button>
+      </header>
+
+      <section class="section">
+        <label for="eventSelect">日期組</label>
+        <div class="row">
+          <select id="eventSelect"></select>
+          <button id="addEventBtn" title="新增日期組">＋</button>
+        </div>
+        <input id="eventNameInput" type="text" maxlength="32" placeholder="例如 main, earlybird, tour-1" />
+      </section>
+
+      <section class="section">
+        <label for="dateInput">日期時間</label>
+        <div class="date-time-grid">
+          <input id="dateInput" type="date" />
+          <select id="hourSelect" aria-label="小時"></select>
+          <select id="minuteSelect" aria-label="分鐘"></select>
+        </div>
+        <div class="toggles">
+          <label><input id="padMonthInput" type="checkbox" checked /> 月份補 0</label>
+          <label><input id="padDayInput" type="checkbox" checked /> 日期補 0</label>
+        </div>
+        <div class="weekday-options">
+          <label for="weekdayLanguageSelect">星期語言</label>
+          <select id="weekdayLanguageSelect">
+            <option value="zh">中文</option>
+            <option value="en">English</option>
+          </select>
+          <label for="weekdayStyleSelect">星期樣式</label>
+          <select id="weekdayStyleSelect"></select>
+        </div>
+        <button id="applyBtn" class="primary">套用到文件</button>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>綁定選取文字</h2>
+          <span id="selectionStatus">未讀取</span>
+        </div>
+        <div class="bind-grid">
+          <button data-bind-part="month">月</button>
+          <button data-bind-part="day">日</button>
+          <button data-bind-part="time">時間</button>
+          <button data-bind-part="weekday">星期</button>
+        </div>
+      </section>
+
+      <details class="section compact-section" id="bindingsPanel">
+        <summary class="section-head">
+          <h2>目前綁定</h2>
+          <span id="bindingCount">0 個</span>
+        </summary>
+        <div class="compact-actions">
+          <button id="scanBtn" class="text-button">掃描</button>
+        </div>
+        <div id="bindingList" class="binding-list"></div>
+      </details>
+    </main>
+
+    <script src="./js/CSInterface.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
